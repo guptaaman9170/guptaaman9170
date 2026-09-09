@@ -59,42 +59,56 @@
 ## 🚀 Featured Projects
 
 ### 🍽️ 1. **[DineScout AI — Agentic Restaurant Recommendation System](https://github.com/guptaaman9170/Restaurant-AI-agent)**
-`React.js` · `Node.js` · `Express.js` · `LangGraph.js` · `LangChain` · `Google Gemini` · `Tavily` · `Zod` · `MongoDB Atlas`
-- Engineered a **7-node LangGraph.js agentic workflow** over 15 typed state channels, replacing ad-hoc prompt chaining with 1 auditable graph spanning intent analysis, discovery, research, and synthesis.
-- Validated every Google Gemini response against **Zod JSON schemas across 5 reasoning stages**, collapsing 5 bespoke parsers into 1 shared layer and eliminating malformed-output failures.
-- Designed a **deterministic 6-factor weighted ranking engine** (budget 25%, dietary 25%, cuisine 20%, atmosphere 15%, dish 10%, evidence 5%), delivering 100% reproducible rankings rather than LLM hallucination.
-- Improved perceived latency by streaming **7 progress checkpoints over Server-Sent Events (SSE)** instead of 1 terminal response, grounding each recommendation on 3 Tavily web retrieval pipelines.
+`React.js` · `Node.js` · `Express.js` · `LangGraph.js` · `LangChain` · `Google Gemini` · `Tavily Search API` · `Zod` · `MongoDB Atlas`
+- Engineered an asynchronous **7-node LangGraph.js agentic workflow** over 15 typed state channels, replacing ad-hoc prompt chaining with an auditable graph spanning intent analysis, discovery, research, and synthesis.
+- Validated every Google Gemini response against **Zod JSON schemas across 5 reasoning stages**, collapsing 5 disparate parsers into 1 unified schema layer and eliminating malformed LLM outputs.
+- Designed a **deterministic 6-factor weighted ranking engine** (budget 25%, dietary 25%, cuisine 20%, atmosphere 15%, dish 10%, evidence 5%), delivering 100% reproducible rankings grounded in real evidence.
+- Optimized perceived latency by streaming **7 real-time progress checkpoints over Server-Sent Events (SSE)** instead of 1 terminal response, grounding recommendations on 3 Tavily web retrieval pipelines.
 
 ---
 
-### 💬 2. **[ConvoSync — Real-Time Microservices Chat Application](https://github.com/guptaaman9170/Wp-Clone)**
+### 🎙️ 2. **[Lenny Growth Assistant — RAG-Powered Podcast Intelligence System](https://github.com/guptaaman9170/lenny-growth-assistant)**
+`FastAPI` · `Python` · `React.js` · `PostgreSQL` · `SQLAlchemy` · `ChromaDB` · `Ollama (Qwen2.5)` · `RAG` · `Tailwind CSS`
+- Built an AI-powered conversational search and growth intelligence system for querying and synthesizing tactical product advice across Lenny's Podcast transcripts.
+- Implemented high-density semantic vector search with **ChromaDB embeddings** and local LLM inference using **Ollama (Qwen2.5:3B)** to deliver private, zero-latency answers with episode-level source citations.
+- Architected persistent multi-turn chat sessions, context windows, and extracted knowledge artifacts using **PostgreSQL and SQLAlchemy**.
+- Crafted an interactive, responsive frontend in **React.js and Tailwind CSS** with real-time markdown rendering, source attribution pills, and session management.
+
+---
+
+### 🛡️ 3. **[Borrower-Copilot — AI Lending Defense & Underwriting Rules Engine](https://github.com/guptaaman9170/Borrower-Copilot)** · [🌐 Live Demo](https://borrower-copilot-plum.vercel.app/)
+`React.js` · `TypeScript` · `Vite` · `Tailwind CSS` · `Financial Rules Engine` · `FOIR / APR Modeling` · `Vercel`
+- Architected a loan qualification and borrower defense copilot evaluating **FOIR thresholds, fair interest rate bands, RBI all-in APRs (including fees & GST)**, and safe EMI ceilings before loan agreement signing.
+- Designed a **decoupled, zero-dependency pure TypeScript underwriting rules engine** (`src/rules/`) with preloaded benchmark personas (Salaried MNC, Kirana MSME, Informal Gig Worker).
+- Built an interactive **Branch-Ready Negotiation Card** with mobile print-friendly styling, copyable verbatim negotiation scripts, red-flag audit checks, and income/rate stress test curves.
+- Engineered adaptive 2-tier questioning with an honest confidence meter that widens ranges on missing data and appropriately models New-To-Credit (NTC) applicants.
+
+---
+
+### 🎯 4. **[InterviewPrep AI — Real-Time Generative AI Technical Mock Interviewer](https://github.com/guptaaman9170/InterviewPrep-AI)** · [🌐 Live Demo](https://interview-prep-ai-tau-seven.vercel.app/)
+`React 19` · `Vite` · `Node.js` · `Express.js` · `MongoDB` · `Google Gemini API (@google/genai)` · `Framer Motion` · `Tailwind CSS`
+- Engineered a full-stack technical interview preparation platform generating contextual interview questions and providing structured performance feedback using the **Google Gemini API (`@google/genai`)**.
+- Built an end-to-end interview simulation runtime featuring dynamic question progression, role-specific technical evaluation, and detailed scorecards.
+- Implemented secure JWT authentication with HTTP-only cookies, candidate progress persistence with **MongoDB**, and animated interactive interfaces with **Framer Motion**.
+- Deployed on **Vercel** with full client-server decoupling, state management across interview stages, and responsive design.
+
+---
+
+### 💬 5. **[ConvoSync — Real-Time Microservices Chat Application](https://github.com/guptaaman9170/Wp-Clone)**
 `React.js` · `Node.js` · `Express.js` · `Socket.IO` · `MongoDB` · `GridFS` · `Google OAuth 2.0` · `Docker` · `Docker Compose`
-- Architected an enterprise-grade messaging platform as **3 containerized microservices**: an Express REST API, a Socket.IO real-time gateway, and a React browser client — reducing local environment bootstrap to a single `docker compose up`.
+- Architected an enterprise-grade messaging platform as **3 containerized microservices**: an Express REST API, a Socket.IO real-time gateway, and a React browser client — reducing bootstrap to `docker compose up`.
 - Implemented targeted WebSocket routing via an **in-memory user-to-socket registry**, reducing per-message emissions from global room broadcasts down to exactly 1 recipient session.
 - Designed **3 Mongoose schemas across 9 REST routes** spanning 4 resource domains, deduplicating conversations with a members array-match query that eliminates duplicate threads on reopen.
 - Delivered **Google OAuth 2.0 sign-in** with JWT credential decoding and **GridFS image streaming**, bypassing the 16 MB BSON inline document storage limit for seamless media uploads.
 
 ---
 
-### ☕ 3. **[SarvaCafe — Voice & QR AI Ordering Ecosystem](https://github.com/guptaaman9170/SarvaCafe)**
-`React.js` · `Node.js` · `Express.js` · `OpenAI API` · `Whisper` · `MongoDB` · `Power Automate`
-- Developed an interactive contactless dining ecosystem combining dynamic QR table ordering with voice-driven conversational ordering.
-- Integrated **OpenAI Whisper** and GPT function calling to parse spoken food requests into structured cart mutations in real-time.
-- Automated kitchen dispatch and live order status tracking with event-driven background workflows and webhook notifications.
-
----
-
-### 🛡️ 4. **[ResolveX — Intelligent Hackathon Finalist Platform](https://github.com/guptaaman9170/Team_ResolveX_V2.0)**
-`TypeScript` · `Python` · `React.js` · `FastAPI` · `NLP` · `Scikit-learn`
-- High-performance intelligent solution platform that earned **National Finalist status at Idea One Hackathon 2025** (2nd in East Region, Top 1%) and **5th rank nationwide at Jaipur Cybrathon 2K25**.
-- Implemented automated problem classification, intelligent decision-making logic, and collaborative real-time tracking dashboards.
-
----
-
-### 💼 5. **[Borrower-Copilot — AI-Powered Financial Assistant](https://github.com/guptaaman9170/Borrower-Copilot)**
-`TypeScript` · `React.js` · `Node.js` · `LLM Integration` · `Tailwind CSS`
-- Built an intelligent AI copilot application designed to assist users with financial documentation, loan qualification queries, and policy navigation.
-- Powered by structured prompt workflows and responsive TypeScript interfaces for smooth user self-service.
+### 🏛️ 6. **[ResolveX V3.0 — AI Civic Grievance Redressal & Intelligent Decision Platform](https://github.com/guptaaman9170/ResolveX_V3.0)** · [🌐 Live Demo](https://resolve-x-v3-0.vercel.app/)
+`React.js` · `Node.js` · `Express.js` · `Python` · `FastAPI` · `NLP & Scikit-learn` · `MongoDB` · `Vercel`
+- Flagship intelligent civic platform earning **National Finalist status at Idea One Hackathon 2025** (2nd in East Region, Top 1% of 1000+ teams) & **5th Rank Nationwide at Jaipur Cybrathon 2K25**.
+- Architected a distributed multi-tier ecosystem consisting of a citizen web portal, administrative command dashboard, Node.js/Express service, and a Python **FastAPI AI microservice**.
+- Implemented automated **NLP text classification and priority triage algorithms** to categorize complaints, compute urgency scores, and eliminate manual routing bottlenecks.
+- Delivered live real-time status tracking, department-level workload analytics, and cross-platform role-based dashboards.
 
 ---
 
@@ -116,15 +130,17 @@
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
   <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Google Gemini" />
   <img src="https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama" />
   <img src="https://img.shields.io/badge/Whisper-00A67E?style=for-the-badge&logo=openai&logoColor=white" alt="Whisper" />
   <img src="https://img.shields.io/badge/RAG_Pipelines-005571?style=for-the-badge" alt="RAG" />
+  <img src="https://img.shields.io/badge/ChromaDB-FF6600?style=for-the-badge" alt="ChromaDB" />
   <img src="https://img.shields.io/badge/Prompt_Engineering-375BD2?style=for-the-badge" alt="Prompt Engineering" />
   <img src="https://img.shields.io/badge/Zod_Validation-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod" />
 </p>
 
 <p align="center"><sub><b>Backend & Web Development</b></sub></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,react,tailwind,flask" alt="backend and web" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,react,tailwind,fastapi,flask,vite" alt="backend and web" />
   <img src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="Socket.IO" />
   <img src="https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSockets" />
   <img src="https://img.shields.io/badge/Server--Sent_Events_(SSE)-005571?style=for-the-badge" alt="SSE" />
@@ -135,8 +151,9 @@
 
 <p align="center"><sub><b>Databases & Storage</b></sub></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=mongodb,mysql" alt="databases" />
+  <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql" alt="databases" />
   <img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/GridFS_Streaming-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="GridFS" />
 </p>
 
